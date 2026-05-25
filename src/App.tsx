@@ -2,19 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-import { Blog } from './pages/Blog';
-import { TwoFactorGenerator } from './tools/TwoFactorGenerator';
-import { WordCounterArticle } from './blog/WordCounterArticle';
-import { PasswordGeneratorArticle } from './blog/PasswordGeneratorArticle';
-import { SpeedTestArticle } from './blog/SpeedTestArticle';
-import { TwoFactorArticle } from './blog/TwoFactorArticle';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { Blog } from './pages/Blog';
 
 import { Home } from './pages/Home';
 import { WordCounter } from './tools/WordCounter';
 import { PasswordGenerator } from './tools/PasswordGenerator';
 import { SpeedTest } from './tools/SpeedTest';
+import { TwoFactorGenerator } from './tools/TwoFactorGenerator';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +22,9 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/tools/word-counter" element={<WordCounter />} />
             <Route path="/tools/password-generator" element={<PasswordGenerator />} />
+            <Route path="/tools/speed-test" element={<SpeedTest />} />
+            <Route path="/tools/two-factor" element={<TwoFactorGenerator />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </main>
         <Footer />
